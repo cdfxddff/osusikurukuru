@@ -15,3 +15,4 @@ def okuru1(conb):
         conb[ii+1]=1
     else:
         conb[0]=1
+    return ii

@@ -15,7 +15,7 @@ def view2(conb):
     print(' ',conb[8]+'\u3000'+'\u0020'+conb[4])
     print(' ',*conb[8:5:-1])
 #奇数だけ対応
-def viewyoko1retu(conb):
+def viewyoko1retu(conb,count):
     if len(conb)%2 == 0:
         print("conbが奇数でないよ")
         sys.exit()
@@ -26,10 +26,12 @@ def viewyoko1retu(conb):
             b.append('u')
         else:
             b.append(' ')
-    print('\033[2A',*conb)
-    print('',*b)
+    print('\r','\033[3A','',*conb)
+    print('  ',*b)
+    print("得点:",count)
     #print('','',a,'口',a)
 
-def viewfastyoko1retu(conb):
+def viewfastyoko1retu(conb,count):
+    print(' ')
     print('\n')
-    print(*conb)
+    
